@@ -46,7 +46,7 @@ This guide explains Oracle Cloud Infrastructure's Regions, Availability Domains 
 ### GCP vs OCI Quick Comparison
 | OCI Term              | GCP Term           | Key Differences                          |
 |-----------------------|--------------------|------------------------------------------|
-| Availability Domain   | Zone               | Both isolate failures at the data center level. OCI usually has 3 ADs per region; GCP typically offers 3+ zones per region. |
+| Availability Domain   | Zone               | Both isolate failures at the data center level. OCI usually has 3 ADs per region; GCP typically offers 3+ zones based on region. |
 ---
 
 ## 3. Fault Domains (FDs)
