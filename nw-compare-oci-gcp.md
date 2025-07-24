@@ -131,4 +131,5 @@ This guide lays out a detailed, clear comparison between Oracle OCI and Google C
 - Bastion host access is managed in OCI; GCP typically uses IAM/IAP or custom setups.
 - Both platforms support hybrid and multi-cloud designs and flexible DNS management.
 
-<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/09ee9c2d-d9a2-4a7c-95c3-e3812c9ac170" />
+<img width="824" height="357" alt="image" src="https://github.com/user-attachments/assets/9f89f42d-7fd0-41d3-8d2f-8e18812917b8" />
+
