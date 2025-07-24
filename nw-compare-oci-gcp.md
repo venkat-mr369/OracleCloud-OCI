@@ -1,8 +1,8 @@
-# Oracle Cloud Infrastructure (OCI) Networking vs Google Cloud Platform (GCP): Services Comparison
+### Oracle Cloud Infrastructure (OCI) Networking vs Google Cloud Platform (GCP): Services Comparison
 
 This guide lays out a detailed, clear comparison between Oracle OCI and Google Cloud Platform networking services, focusing on core concepts, gateways, connectivity, security, load balancing, DNS, and more. It is written for easy teaching or review, with structured tables and explanations.
 
-## Core Networking Concepts
+#### Core Networking Concepts
 
 ### 1. Virtual Networks
 
