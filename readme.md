@@ -1,4 +1,4 @@
-### T Venkat (Tirupati Venkat)
+### T Venkat [Tirupati Venkat]
 #### venkat.mr369@gmail.com, 18 years of Exp. Working as a Multi-Cloud Architect 
 #### What Topics to Learn for OCI Architect Associate online training 
 If you are planning to take this exam, you must be well-prepared with topics such as Cloud computing concepts (High Availability, Disaster Recovery, Security), regions, availability domains, OCI terminology and services, networking, databases, Autonomous Database, load balancing, Fast Connect, VPN, Compartments, Identity and Access Management, and tagging. Once you finish learning these topics and doing Hands-on Cloud labs, you are ready for the exam.
