@@ -228,7 +228,7 @@ graph TD
   Analytics --> App
 ```
 ```mermaid
-<div class="mermaid" style="background-color: #f0f0f0; padding: 10px;">
+%%{init: {'theme': 'default'}}%%
 graph TD
   User[User Request]
   VCN["Virtual Cloud Network"]
@@ -271,5 +271,5 @@ graph TD
 
   ObjectStore --> CDN
   Analytics --> App
-</div>
+
 ```
