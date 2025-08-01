@@ -228,3 +228,48 @@ graph TD
   Analytics --> App
 ```
 
+<div class="mermaid" style="background-color: #f0f0f0; padding: 10px;">
+graph TD
+  User[User Request]
+  VCN["Virtual Cloud Network"]
+  Subnets["Subnets: Public / Private App / Private DB / Analytics / Admin"]
+  Firewall["Firewalls & Security Groups"]
+  API["API Gateway"]
+  LB["Load Balancer"]
+  App["App / Microservices Cluster (OKE)"]
+  ObjectStore["Object Storage + CDN"]
+  Block["Block / File Storage"]
+  RDBMS["Relational DB"]
+  NoSQL["NoSQL DB"]
+  Cache["Redis Cache"]
+  Analytics["Analytics / Monitoring"]
+  IAM["IAM & Key Management"]
+  CDN["CDN"]
+
+  User --> API
+  API --> LB
+  LB --> App
+  App --> ObjectStore
+  App --> Block
+  App --> RDBMS
+  App --> NoSQL
+  App --> Cache
+  App --> Analytics
+
+  VCN --> Subnets
+  Subnets --> API
+  Subnets --> LB
+  Subnets --> App
+  Subnets --> RDBMS
+  Subnets --> NoSQL
+  Subnets --> Cache
+  Subnets --> Analytics
+  Subnets --> Firewall
+
+  IAM --> App
+  IAM --> API
+
+  ObjectStore --> CDN
+  Analytics --> App
+</div>
+
