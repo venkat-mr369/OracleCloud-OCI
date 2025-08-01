@@ -183,7 +183,7 @@ All technical aspects below are mapped to OCI services with precise explanations
 - Implement **firewall, security lists, and IAM** for defense-in-depth.
 - Monitor all metrics and manage spend using built-in analytics and budgeting.
 
-```mermaid
+
 graph TD
   User[User Request]
   VCN[Virtual Cloud Network]
@@ -199,6 +199,7 @@ graph TD
   Cache[Redis Cache]
   Analytics[Analytics/Monitoring]
   IAM[IAM & Key Management]
+  CDN[CDN]
 
   User --> API
   API --> LB
@@ -211,13 +212,19 @@ graph TD
   App --> Analytics
 
   VCN --> Subnets
-  Subnets --> {API, LB, App, RDBMS, NoSQL, Cache, Analytics}
+  Subnets --> API
+  Subnets --> LB
+  Subnets --> App
+  Subnets --> RDBMS
+  Subnets --> NoSQL
+  Subnets --> Cache
+  Subnets --> Analytics
   Subnets --> Firewall
 
   IAM --> App
   IAM --> API
 
-  ObjectStore --> CDN[CDN]
-
+  ObjectStore --> CDN
   Analytics --> App
-```
+
+
