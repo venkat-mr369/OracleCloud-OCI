@@ -185,71 +185,39 @@ All technical aspects below are mapped to OCI services with precise explanations
 
 ```mermaid
 graph TD
-  subgraph Global Prime Video Platform on OCI
+  User[User Request]
+  VCN[Virtual Cloud Network]
+  Subnets[Subnets: Public / Private App / Private DB / Analytics / Admin]
+  Firewall[Firewalls & Security Groups]
+  API[API Gateway]
+  LB[Load Balancer]
+  App[App/Microservices Cluster (OKE)]
+  ObjectStore[Object Storage + CDN]
+  Block[Block/File Storage]
+  RDBMS[Relational DB]
+  NoSQL[NoSQL DB]
+  Cache[Redis Cache]
+  Analytics[Analytics/Monitoring]
+  IAM[IAM & Key Management]
 
-    subgraph 1. Network Foundation
-      A1[Virtual Cloud Network (VCN)]
-      A2[Subnets\n- Public\n- Private App\n- Private DB\n- Private Analytics\n- Restricted/Admin]
-      A3[Firewalls & Security Groups]
-      A1 --> A2 --> A3
-    end
+  User --> API
+  API --> LB
+  LB --> App
+  App --> ObjectStore
+  App --> Block
+  App --> RDBMS
+  App --> NoSQL
+  App --> Cache
+  App --> Analytics
 
-    subgraph 2. Compute & Application
-      B1[OKE/Kubernetes Cluster]
-      B2[Microservices with Multi-language Support]
-      B3[Autoscaling Pods/VMs]
-      B1 --> B2 --> B3
-    end
+  VCN --> Subnets
+  Subnets --> {API, LB, App, RDBMS, NoSQL, Cache, Analytics}
+  Subnets --> Firewall
 
-    subgraph 3. Storage & Content Delivery
-      C1[Object Storage + CDN]
-      C2[Block Storage]
-      C3[File Storage]
-      C1 --> C2
-      C1 --> C3
-    end
+  IAM --> App
+  IAM --> API
 
-    subgraph 4. Database & Caching
-      D1[Relational Databases (Autonomous DB/Exadata)]
-      D2[NoSQL Databases (OCI NoSQL)]
-      D3[Redis / OCI Cache]
-      D1 --> D3
-      D2 --> D3
-    end
+  ObjectStore --> CDN[CDN]
 
-    subgraph 5. API & Load Balancing
-      E1[API Gateway]
-      E2[Load Balancer]
-      E1 --> E2
-    end
-
-    subgraph 6. Security & IAM
-      F1[OCI Identity & Access Management (IAM)]
-      F2[Key Management Service]
-      F1 --> F2
-    end
-
-    subgraph 7. Analytics & Monitoring
-      G1[Data Warehouse & Analytics]
-      G2[Monitoring & Observability]
-      G1 --> G2
-    end
-
-    subgraph Flow
-      User[User Request]
-      User --> E1
-      E2 --> B2
-      B2 --> D1
-      B2 --> D2
-      B2 --> D3
-      B2 --> C1
-      B2 --> C2
-      B2 --> C3
-      B2 --> G1
-      B2 --> G2
-      F1 -. Access Control .-> E1
-      F1 -. Access Control .-> B2
-    end
-
-  end
+  Analytics --> App
 ```
