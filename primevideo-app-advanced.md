@@ -227,7 +227,7 @@ graph TD
   ObjectStore --> CDN
   Analytics --> App
 ```
-
+```mermaid
 <div class="mermaid" style="background-color: #f0f0f0; padding: 10px;">
 graph TD
   User[User Request]
@@ -272,4 +272,4 @@ graph TD
   ObjectStore --> CDN
   Analytics --> App
 </div>
-
+```
