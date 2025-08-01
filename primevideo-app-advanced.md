@@ -1,8 +1,6 @@
-Certainly! Below is a comprehensive, in-depth technical breakdown for building a global, multi-language application like Prime Video on Oracle Cloud Infrastructure (OCI). The content is structured for direct use in a Word document, including detailed explanations of each service, example configurations, network diagrams (described for inclusion), and an estimation chart for infrastructure planning. This guide avoids any reference links and provides clear, practical insight suitable for architects and engineers.
+### Global Prime Video Platform Architecture on Oracle Cloud Infrastructure (OCI)
 
-# Global Prime Video Platform Architecture on Oracle Cloud Infrastructure (OCI)
-
-## 🌐 Multi-Region & Multi-Language Overview
+#### 🌐 Multi-Region & Multi-Language Overview
 
 Prime Video delivers content globally in multiple languages (English, Telugu, Tamil, Hindi, Kannada, etc.), to millions of users. Key requirements:
 - High availability and geo-distributed deployment.
@@ -12,7 +10,7 @@ Prime Video delivers content globally in multiple languages (English, Telugu, Ta
 
 All technical aspects below are mapped to OCI services with precise explanations and realistic scale/capacity estimates.
 
-## 1. **Core Networking**
+### 1. **Core Networking**
 
 ### 1.1 Virtual Cloud Network (**VCN**)
 
@@ -185,5 +183,3 @@ All technical aspects below are mapped to OCI services with precise explanations
 - Implement **firewall, security lists, and IAM** for defense-in-depth.
 - Monitor all metrics and manage spend using built-in analytics and budgeting.
 
-**Instructions:**  
-Copy and paste this content directly into your Word document. For diagrams, use smart art/flow charts to represent workflow sections, and use Word tables for the estimation charts. Headings match Word’s structure for clarity and quick navigation. This approach matches best DevOps/architectural practices for a global streaming service built on Oracle Cloud.
