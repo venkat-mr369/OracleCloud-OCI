@@ -183,7 +183,7 @@ All technical aspects below are mapped to OCI services with precise explanations
 - Implement **firewall, security lists, and IAM** for defense-in-depth.
 - Monitor all metrics and manage spend using built-in analytics and budgeting.
 
-
+```mermaid
 graph TD
   User[User Request]
   VCN[Virtual Cloud Network]
@@ -226,5 +226,5 @@ graph TD
 
   ObjectStore --> CDN
   Analytics --> App
-
+```
 
